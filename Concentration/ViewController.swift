@@ -15,9 +15,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         startNewGame()
-        view.backgroundColor = UIColor.black
     }
-
+    var theme : Theme!
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -39,7 +38,9 @@ class ViewController: UIViewController {
     }
     func startNewGame(){
         emoji = [Int:String]()
-        let theme = themes[Int(arc4random_uniform(UInt32(themes.count)))]
+        theme = themes[Int(arc4random_uniform(UInt32(themes.count)))]
+        view.backgroundColor = theme.backgroundColor
+        flipCountLabel.textColor = theme.cardColor
         emojiChoices = theme.emoji
         game = Concentration(numberOfCardPairs:(cardButtons.count+1)/2)
         updateCards()
@@ -60,7 +61,7 @@ class ViewController: UIViewController {
                     button.backgroundColor = UIColor.clear
                 }
                 else{
-                    button.backgroundColor = UIColor.orange
+                    button.backgroundColor = theme.cardColor
                 }
             }
         }
