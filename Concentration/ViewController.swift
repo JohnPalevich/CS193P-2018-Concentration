@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        updateCards()
+        startNewGame()
         view.backgroundColor = UIColor.black
     }
 
@@ -38,6 +38,9 @@ class ViewController: UIViewController {
     @IBAction func newGameStart(_ sender: UIButton) { startNewGame()
     }
     func startNewGame(){
+        emoji = [Int:String]()
+        let theme = themes[Int(arc4random_uniform(UInt32(themes.count)))]
+        emojiChoices = theme.emoji
         game = Concentration(numberOfCardPairs:(cardButtons.count+1)/2)
         updateCards()
         flipCount = 0
@@ -62,7 +65,7 @@ class ViewController: UIViewController {
             }
         }
     }
-    var emojiChoices = ["🤔","😭","😡","😤","🤯","🤑","🤫","😱"]
+    var emojiChoices = [String]()
     var emoji = [Int:String]()
     func emoji(for card : Card) -> String{
         if emoji[card.identifier] == nil{

@@ -14,6 +14,7 @@
 		524704FF1FEC951900392E56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 524704FD1FEC951900392E56 /* LaunchScreen.storyboard */; };
 		524705071FEC98E200392E56 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524705061FEC98E200392E56 /* Card.swift */; };
 		524705091FEC99EC00392E56 /* Concentration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524705081FEC99EC00392E56 /* Concentration.swift */; };
+		5247050B1FECAA0E00392E56 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5247050A1FECAA0E00392E56 /* Theme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		524705001FEC951900392E56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		524705061FEC98E200392E56 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		524705081FEC99EC00392E56 /* Concentration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Concentration.swift; sourceTree = "<group>"; };
+		5247050A1FECAA0E00392E56 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		524704F31FEC951900392E56 /* Concentration */ = {
 			isa = PBXGroup;
 			children = (
+				5247050A1FECAA0E00392E56 /* Theme.swift */,
 				524704F41FEC951900392E56 /* AppDelegate.swift */,
 				524704F61FEC951900392E56 /* ViewController.swift */,
 				524704F81FEC951900392E56 /* Main.storyboard */,
@@ -144,6 +147,7 @@
 			files = (
 				524704F71FEC951900392E56 /* ViewController.swift in Sources */,
 				524705091FEC99EC00392E56 /* Concentration.swift in Sources */,
+				5247050B1FECAA0E00392E56 /* Theme.swift in Sources */,
 				524705071FEC98E200392E56 /* Card.swift in Sources */,
 				524704F51FEC951900392E56 /* AppDelegate.swift in Sources */,
 			);
