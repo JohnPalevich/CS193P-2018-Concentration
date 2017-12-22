@@ -18,6 +18,15 @@ struct Concentration{
             cards += [card, card]
         }
         //TODO: randomize cards
+        shuffle()
+    }
+    mutating func shuffle(){
+        for i in 0..<cards.count-1{
+            let swapIndex = i+Int(arc4random_uniform(UInt32(cards.count-i)))
+            let temp = cards[i]
+            cards[i] = cards[swapIndex]
+            cards[swapIndex] = temp
+        }
     }
     mutating func flipCard(cardIndex : Int){
         if !cards[cardIndex].isMatched
