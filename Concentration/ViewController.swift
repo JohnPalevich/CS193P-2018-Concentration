@@ -24,9 +24,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var flipCountLabel: UILabel!
     
     @IBOutlet var cardButtons: [UIButton]!
-    var flipCount = 0{didSet {flipCountLabel.text = "Flips: \(flipCount)"}}
+    
     @IBAction func flipCard(_ sender: UIButton) {
-        flipCount+=1
         if let index = cardButtons.index(of: sender){
             game.flipCard(cardIndex: index)
             updateCards()
@@ -44,9 +43,9 @@ class ViewController: UIViewController {
         emojiChoices = theme.emoji
         game = Concentration(numberOfCardPairs:(cardButtons.count+1)/2)
         updateCards()
-        flipCount = 0
     }
     func updateCards(){
+        flipCountLabel.text = "Flips: \(game.flipCount)"
         for index in cardButtons.indices{
             let card = game.cards[index]
             let button = cardButtons[index]

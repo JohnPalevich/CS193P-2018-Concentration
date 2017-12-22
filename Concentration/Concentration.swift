@@ -11,6 +11,7 @@ import Foundation
 struct Concentration{
     var cards = [Card]()
     var indexOfOnlyFlippedCard : Int?
+    var flipCount = 0
     init(numberOfCardPairs : Int) {
         for i in 0..<numberOfCardPairs
         {
@@ -31,6 +32,7 @@ struct Concentration{
     mutating func flipCard(cardIndex : Int){
         if !cards[cardIndex].isMatched
         {
+            flipCount+=1
             if let matchIndex = indexOfOnlyFlippedCard, matchIndex != cardIndex{
                 if cards[matchIndex].identifier == cards[cardIndex].identifier{
                     cards[matchIndex].isMatched = true
