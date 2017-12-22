@@ -178,13 +178,6 @@
                                     <action selector="flipCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8lU-Jo-eRo"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Flips:  0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iwm-ts-Kpo">
-                                <rect key="frame" x="86" y="616" width="202" height="61"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
-                                <color key="textColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="highlightedColor" red="1" green="0.9628118229409256" blue="0.9852453750478547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dwP-Di-pNf">
                                 <rect key="frame" x="102" y="704" width="169" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -194,12 +187,27 @@
                                     <action selector="newGameStart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yqt-8a-nVX"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RZN-pk-fbG">
+                                <rect key="frame" x="86" y="577" width="202" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <color key="textColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Flips:  0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iwm-ts-Kpo">
+                                <rect key="frame" x="86" y="635" width="202" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <color key="textColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="highlightedColor" red="1" green="0.9628118229409256" blue="0.9852453750478547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.026842080056667328" green="0.051333360373973846" blue="0.034886065870523453" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="flipCountLabel" destination="iwm-ts-Kpo" id="0YA-ZS-evm"/>
+                        <outlet property="scoreCountLabel" destination="RZN-pk-fbG" id="8JK-MB-yyX"/>
                         <outlet property="view" destination="8bC-Xf-vdC" id="7ca-2C-MF5"/>
                         <outletCollection property="cardButtons" destination="PvW-Xc-XfF" collectionClass="NSMutableArray" id="ySj-RL-lNl"/>
                         <outletCollection property="cardButtons" destination="DOY-Ke-yXp" collectionClass="NSMutableArray" id="CvW-nC-4gS"/>

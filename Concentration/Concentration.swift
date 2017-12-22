@@ -12,6 +12,7 @@ struct Concentration{
     var cards = [Card]()
     var indexOfOnlyFlippedCard : Int?
     var flipCount = 0
+    var score = 0
     init(numberOfCardPairs : Int) {
         for i in 0..<numberOfCardPairs
         {
@@ -37,12 +38,25 @@ struct Concentration{
                 if cards[matchIndex].identifier == cards[cardIndex].identifier{
                     cards[matchIndex].isMatched = true
                     cards[cardIndex].isMatched = true
+                    score += 2
+                }
+                else{
+                    if(cards[matchIndex].flippedBefore){
+                        score-=1
+                    }
+                    if(cards[cardIndex].flippedBefore){
+                        score-=1
+                    }
                 }
                 cards[cardIndex].isFaceUp = true
                 indexOfOnlyFlippedCard = nil
              }
             else{
                 for flipDownIndex in cards.indices{
+                    if(cards[flipDownIndex].isFaceUp)
+                    {
+                        cards[flipDownIndex].flippedBefore = true
+                    }
                     cards[flipDownIndex].isFaceUp = false
                 }
                 cards[cardIndex].isFaceUp = true

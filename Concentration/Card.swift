@@ -12,7 +12,7 @@ struct Card {
     var identifier : Int
     var isFaceUp = false
     var isMatched = false
-    
+    var flippedBefore = false
     init(identifier : Int) {
         self.identifier = identifier
     }

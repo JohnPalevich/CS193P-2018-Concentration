@@ -21,6 +21,7 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    @IBOutlet weak var scoreCountLabel: UILabel!
     @IBOutlet weak var flipCountLabel: UILabel!
     
     @IBOutlet var cardButtons: [UIButton]!
@@ -39,6 +40,7 @@ class ViewController: UIViewController {
         emoji = [Int:String]()
         theme = themes[Int(arc4random_uniform(UInt32(themes.count)))]
         view.backgroundColor = theme.backgroundColor
+        scoreCountLabel.textColor = theme.cardColor
         flipCountLabel.textColor = theme.cardColor
         emojiChoices = theme.emoji
         game = Concentration(numberOfCardPairs:(cardButtons.count+1)/2)
@@ -46,6 +48,7 @@ class ViewController: UIViewController {
     }
     func updateCards(){
         flipCountLabel.text = "Flips: \(game.flipCount)"
+        scoreCountLabel.text = "Score: \(game.score)"
         for index in cardButtons.indices{
             let card = game.cards[index]
             let button = cardButtons[index]
